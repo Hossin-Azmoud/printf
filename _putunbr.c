@@ -6,5 +6,5 @@
 */
 int _putunbr(unsigned int n)
 {
-    return _putnbr((int) n);
+	return _putnbr((int) n);
 }
