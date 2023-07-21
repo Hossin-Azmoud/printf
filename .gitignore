@@ -1,0 +1,9 @@
+# testing modules...
+*test*
+
+# bin
+*.out
+main
+
+# nvim stuff
+*~
