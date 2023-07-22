@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 
 			if (*(format + idx) == 0)
 				return (-1);
+
 			res = _printf_manager_(*(format + idx), arg_list);
 
 			if (res == -1)

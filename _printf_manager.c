@@ -7,6 +7,8 @@
  */
 int _printf_manager_(char spec, va_list arg_list)
 {
+	long int num;
+
 	if (spec == 'd' || spec == 'i')
 		return (_putnbr(va_arg(arg_list, int)));
 
@@ -18,6 +20,28 @@ int _printf_manager_(char spec, va_list arg_list)
 
 	if (spec == 's')
 		return (_puts(va_arg(arg_list, char *)));
+	
+	if (spec == 'x')
+	{
+		num = va_arg(arg_list, long int);
+		if (num < 0)
+			return _puthex_man((unsigned int) UINT_MAX + num, LOWERCASE_X);
+		return _puthex_man((unsigned int)num, LOWERCASE_X);
+	}
 
+	if (spec == 'X')
+	{
+		num = va_arg(arg_list, long int);
+		if (num < 0)
+			return _puthex_man((unsigned int) UINT_MAX + num, UPPERCASE_X);
+		return _puthex_man((unsigned int)num, UPPERCASE_X);
+	}
+/*
+	if (spec == 'p')
+	{
+		num = va_arg(arg_list, long int);
+		return _puthex_man((unsigned int)num, PTR);
+	}
+*/
 	return (-1);
 }
