@@ -9,8 +9,8 @@ int _puts(char *str)
 {
 	int a = 0;
 
-	if (!str)
-		return _puts("(null)");
+	if (str == NULL)
+		return (_puts("(null)"));
 
 	while (*(str + a))
 	{
