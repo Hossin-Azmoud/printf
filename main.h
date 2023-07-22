@@ -33,5 +33,4 @@ int _chop_spaces(const char *s, int idx);
 int _puthex_man(unsigned int hex, hex_t type);
 int _hex_helper(unsigned int n, int bound);
 
-
 #endif /* MAIN_PRINT_F_HEADER */
