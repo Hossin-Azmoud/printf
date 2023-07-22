@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 			idx++;
 			continue;
 		}
-		
+
 		nbytes += _putchar(*(format + idx));
 		idx++;
 	}
