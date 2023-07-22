@@ -23,19 +23,13 @@ int _printf(const char *format, ...)
 		{
 			idx++;
 			idx = _chop_spaces(format, idx);
-
 			if (*(format + idx) == 0)
 				return (-1);
 
 			res = _printf_manager_(*(format + idx), arg_list);
 
 			if (res == -1)
-			{
-				nbytes += _putchar('%');
-				nbytes += _putchar(*(format + idx));
-				idx++;
-				continue;
-			}
+				return (-1);
 
 			nbytes += res;
 			idx++;
