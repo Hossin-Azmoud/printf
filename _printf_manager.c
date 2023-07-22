@@ -8,6 +8,7 @@
 int _printf_manager_(char spec, va_list arg_list)
 {
 	long int num;
+	int written = 0;
 
 	if (spec == 'd' || spec == 'i')
 		return (_putnbr(va_arg(arg_list, int)));
@@ -42,6 +43,7 @@ int _printf_manager_(char spec, va_list arg_list)
 		num = va_arg(arg_list, long int);
 		return (_put_uint((unsigned int) num));
 	}
-
-	return (-1);
+	written += _putchar('%');
+	written += _putchar(spec);
+	return (written);
 }
