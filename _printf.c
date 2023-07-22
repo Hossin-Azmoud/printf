@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 			idx = _chop_spaces(format, idx);
 
 			if (*(format + idx) == 0)
-				return (nbytes);
+				return (-1);
 
 			res = _printf_manager_(*(format + idx), arg_list);
 
