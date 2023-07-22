@@ -3,7 +3,7 @@
 
 #define INT_MIN__    "-2147483648"
 #define INT_MIN__LEN 11
-#include <stdio.h>
+
 #include <unistd.h>
 #include <stdarg.h>
 #include <limits.h>
