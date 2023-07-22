@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
-* _chop_spaces - a function that increments the index until there is no spaces left. 
+* _chop_spaces - a function that increments the index
+*		until there is no spaces left.
 * @s: pointer to string to be chopped.
 * @idx: current index.
 * Return: Void
@@ -13,5 +14,5 @@ int _chop_spaces(const char *s, int idx)
 		idx++;
 	}
 
-	return idx;
+	return (idx);
 }

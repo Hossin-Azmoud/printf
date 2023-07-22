@@ -15,7 +15,7 @@ int _putnbr(int n)
 		while (INT_MIN__[i])
 			i += _putchar(INT_MIN__[i]);
 
-		return i;
+		return (i);
 	}
 
 	if (n < 0)
@@ -25,7 +25,7 @@ int _putnbr(int n)
 	}
 
 	if (n <= 9 && n >= 0)
-		return _putchar(n % 10 + '0');
+		return (_putchar(n % 10 + '0'));
 
 	if (n / 10)
 		i += _putnbr(n / 10);
