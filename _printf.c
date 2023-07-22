@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 	{
-		return (nbytes);
+		return (-1);
 	}
 
 	while (*(format + idx))
