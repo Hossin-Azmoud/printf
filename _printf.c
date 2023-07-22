@@ -15,6 +15,11 @@ int _printf(const char *format, ...)
 
 	va_start(arg_list, format);
 
+	if (format == NULL)
+	{
+		return (nbytes);
+	}
+
 	while (*(format + idx))
 	{
 		if (*(format + idx) == '%')
