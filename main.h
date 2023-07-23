@@ -26,7 +26,7 @@ int extra_specs(int spec, va_list arg_list);
 int _putchar(char c);
 int _puts(char *str);
 int _putnbr(int n);
-int _put_bin(long int n);
+int _put_bin(unsigned int n);
 int _put_uint(unsigned int n);
 int _chop_spaces(const char *s, int idx);
 int _puthex_man(va_list va_args, hex_t type);
