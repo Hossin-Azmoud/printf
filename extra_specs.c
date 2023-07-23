@@ -25,6 +25,10 @@ int extra_specs(int spec, va_list arg_list)
 		case 'p': {
 			return (_putptr_t(va_arg(arg_list, void *)));
 		} break;
+		case 'B':
+		case 'b': {
+			return (_put_bin(va_arg(arg_list,  int)));
+		} break;
 		default: {
 			nbytes += _putchar('%');
 			nbytes += _putchar(spec);
