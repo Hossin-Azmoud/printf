@@ -4,7 +4,7 @@
 * @n: The integer to print in binary
 * Return: The number of characters printed
 */
-int _put_bin(int n)
+int _put_bin(long int n)
 {
 	int i = 0;
 
