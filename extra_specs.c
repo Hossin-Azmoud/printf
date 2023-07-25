@@ -29,6 +29,10 @@ int extra_specs(int spec, va_list arg_list)
 		case 'b': {
 			return (_put_bin(va_arg(arg_list,  int)));
 		} break;
+		case 'O':
+		case 'o': {
+			return (_octal(va_arg(arg_list,  unsigned int)));
+		} break;
 		default: {
 			nbytes += _putchar('%');
 			nbytes += _putchar(spec);
