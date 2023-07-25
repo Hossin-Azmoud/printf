@@ -1,21 +1,26 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
-* _oct_helper - func that prints oct.
-* @n:     Numbers
+* _octal - func that prints oct.
+* @num:     Numbers
 * Return: bytes that it writes.
 */
 int _octal(unsigned int num)
 {
-    unsigned int oct = 0, rem, i = 1;
+	int sz = 16;
+	int size = 0;
+	int idx = sz - 1;
+	char buffer[16];
 
-    while (num != 0)
-    {
-        rem = num % 8;
-        num /= 8;
-        oct += rem * i;
-        i *= 10;
-    }
+	buffer[idx--] = 0;
+	do {
+		buffer[idx--] = ((num % 8) + '0');
+		num /= 8;
+		size++;
+	} while (num > 0);
 
-    return (oct);
+	for (; idx < sz; idx++)
+		_putchar(buffer[idx]);
+
+	return (size);
 }

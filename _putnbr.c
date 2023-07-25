@@ -29,6 +29,7 @@ int _putnbr(int n)
 		i += _putchar(n % 10 + '0');
 		return (i);
 	}
+
 	if (n / 10)
 		i += _putnbr(n / 10);
 

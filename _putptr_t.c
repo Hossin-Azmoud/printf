@@ -14,7 +14,7 @@ int _putptr_t(void *ptr)
 	char buffer[17] = { 0 };
 
 	if (ptr == NULL)
-		return (_puts("(null)"));
+		return (_puts("(nil)"));
 
 	buffer[lst--] = 0;
 	address = (uintptr_t)ptr;
