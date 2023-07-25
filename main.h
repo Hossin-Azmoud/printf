@@ -35,5 +35,6 @@ int _putptr_t(void *ptr);
 int _octal(unsigned int n);
 int _strlen(char *s);
 int _special_print(char *s);
+void convert_byte(char byte, char *buff);
 
 #endif /* MAIN_PRINT_F_HEADER */

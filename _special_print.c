@@ -3,12 +3,13 @@
 /**
  * convert_byte - a function that converts a byte into hex.
  * @byte: input byte
- * .
+ * @buff: buffer that will hold hex.
  */
 void convert_byte(char byte, char *buff)
 {
 	int fst = (byte % 16);
 	int sec = ((byte / 16) % 16);
+
 	buff[1] = (fst < 10) ? fst + '0' : fst + 'A' - 10;
 	buff[0] = (sec < 10) ? sec + '0' : sec + 'A' - 10;
 	buff[2] = 0;
@@ -24,6 +25,9 @@ int _special_print(char *s)
 	int idx = 0;
 	int count = 0;
 	char buff[3];
+
+	if (s == NULL)
+		return (_puts("(nil)"));
 
 	while (s[idx] != 0)
 	{
