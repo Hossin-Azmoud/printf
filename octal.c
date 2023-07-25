@@ -5,19 +5,17 @@
 * @n:     Numbers
 * Return: bytes that it writes.
 */
-int _octal(unsigned int n)
+int _octal(unsigned int num)
 {
-	int i = 0;
+    unsigned int oct = 0, rem, i = 1;
 
+    while (num != 0)
+    {
+        rem = num % 8;
+        num /= 8;
+        oct += rem * i;
+        i *= 10;
+    }
 
-	if (n <= 9)
-	{
-		i += _putchar(n % 10 + '0');
-		return (i);
-	}
-	if (n / 10)
-		i += _octal(n / 10);
-
-	i += _putchar(n % 10 + '0');
-	return (i);
+    return (oct);
 }
