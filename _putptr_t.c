@@ -29,8 +29,9 @@ int _putptr_t(void *ptr)
 
 		address /= 16;
 	} while (address > 0);
+
 	buffer[lst--] = 'x';
 	buffer[lst--] = '0';
+
 	return (_puts(buffer + lst + 1));
 }
-

@@ -1,5 +1,19 @@
 #include "main.h"
-#include <stdio.h>
+/**
+ * _strlen - function that returns the length of a string.
+ * @s: pointer to the string.
+ * Return: int length of the string
+ */
+int _strlen(char *s)
+{
+	int count = 0;
+
+	while (*(s + count) != 0)
+		count++;
+
+	return (count);
+}
+
 /**
 * _puts - a function that prints a string
 * @str: pointer to string to be printed.
@@ -7,23 +21,12 @@
 */
 int _puts(char *str)
 {
-    int a = 0;
+	int size;
 
-    if (str == NULL)
-        return (_puts("(null)"));
+	if (str == NULL)
+		return (_puts("(null)"));
 
-    while (*(str + a))
-    {
-        if (*(str + a) < 32 || *(str + a) >= 127)
-        {
-            printf("\\x%02X", *(str + a));
-        }
-        else
-        {
-            _putchar(*(str + a));
-        }
-        a++;
-    }
-
-    return (a);
+	size = _strlen(str);
+	write(1, str, size);
+	return (size);
 }

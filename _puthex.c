@@ -21,7 +21,7 @@ int _hex_helper(unsigned int n, int bound)
 
 /**
 * _puthex_man - function that prints hex.
-* @hex: Number
+* @va_args: args
 * @type: type of printer.
 * Return: bytes that it writes.
 */
@@ -31,7 +31,7 @@ int _puthex_man(va_list va_args, hex_t type)
 	unsigned int hex;
 	int nbytes = 0;
 	int bound = 'a';
-	
+
 	if (tmp < 0)
 		hex = (unsigned int) UINT_MAX + tmp;
 	else
