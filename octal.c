@@ -2,19 +2,22 @@
 
 /**
 * _oct_helper - func that prints oct.
-* @n:     Number
-* @bound: the starting pont of oct (a | A)
+* @n:     Numbers
 * Return: bytes that it writes.
 */
-int _octal(unsigned int n, int bound)
+int _octal(unsigned int n)
 {
-	int nbytes     = 0;
-	unsigned int m = n;
-	int offset     = bound - 10;
+	int i = 0;
 
-	if (m / 8)
-		nbytes += _oct_helper(m / 8, bound);
 
-	nbytes += _putchar(((m % 8) < 10 ? (m % 8) + '0' : (m % 8) + offset));
-	return (nbytes);
+	if (n <= 9)
+	{
+		i += _putchar(n % 10 + '0');
+		return (i);
+	}
+	if (n / 10)
+		i += _octal(n / 10);
+
+	i += _putchar(n % 10 + '0');
+	return (i);
 }

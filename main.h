@@ -32,6 +32,7 @@ int _chop_spaces(const char *s, int idx);
 int _puthex_man(va_list va_args, hex_t type);
 int _hex_helper(unsigned int n, int bound);
 int _putptr_t(void *ptr);
+int _octal(unsigned int n);
 
 
 #endif /* MAIN_PRINT_F_HEADER */
