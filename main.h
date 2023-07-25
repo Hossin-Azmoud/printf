@@ -34,4 +34,5 @@ int _hex_helper(unsigned int n, int bound);
 int _putptr_t(void *ptr);
 int _octal(unsigned int n);
 int _strlen(char *s);
+int _special_print(char *s);
 #endif /* MAIN_PRINT_F_HEADER */

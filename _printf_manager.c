@@ -19,7 +19,9 @@ int _printf_manager_(char spec, va_list arg_list)
 		case 'c': {
 			return (_putchar(va_arg(arg_list, int)));
 		} break;
-		case 'S':
+		case 'S': {
+			return (_special_print(va_arg(arg_list, char *)));
+		} break;
 		case 's': {
 			return (_puts(va_arg(arg_list, char *)));
 		} break;
