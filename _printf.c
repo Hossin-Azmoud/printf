@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 		{
 			idx++;
 			idx = _chop_spaces(format, idx);
+			idx = _chop_flags(format, idx);
 
 			if (*(format + idx) == 0)
 				return (-1);

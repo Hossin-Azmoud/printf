@@ -36,5 +36,6 @@ int _octal(unsigned int n);
 int _strlen(char *s);
 int _special_print(char *s);
 void convert_byte(char byte, char *buff);
+int _chop_flags(const char *s, int idx);
 
 #endif /* MAIN_PRINT_F_HEADER */
